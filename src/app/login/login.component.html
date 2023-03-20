@@ -1,0 +1,61 @@
+<br><br><br><br>
+<div class="card mb-3 container w-50 mt-5">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-lg-4 d-none d-lg-flex">
+        <img style="opacity: 1;" width="550px" height="400px" src="https://tse3.mm.bing.net/th?id=OIP.MYrxgLVyMhoZk7zexakdogHaLJ&pid=Api&P=0" alt="Trendy Pants and Shoes"
+          class="w-100 rounded-t-5 rounded-tr-lg-0 rounded-bl-lg-5" />
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body py-5 px-md-5 cascading-right">
+
+          <form (ngSubmit)="login()" [formGroup]="loginform">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example1">username</label>
+
+              <input formControlName="username" name="username" type="text" id="form2Example1" class="form-control" />
+            </div>
+            <div *ngIf="this.loginform.get('username')?.errors&&this.loginform.get('username')?.touched" class=" mb-3 text-danger">
+              Invalid username
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form2Example2">Password</label>
+
+              <input formControlName="pswd" name="pswd" type="password" id="form2Example2" class="form-control" />
+            </div>
+            <div *ngIf="this.loginform.get('pswd')?.errors&&this.loginform.get('pswd')?.touched" class=" mb-3 text-danger">
+              Invalid password
+            </div>
+            <div  style="color: red;"><b>{{emsg}}</b></div>
+
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                 
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-info   mb-4">Sign in</button>
+              <div class="col">
+                  <!-- Simple link -->
+                  <i class="fa-solid fa-user"></i>
+                  new user ?
+                  <a routerLink="register">Register now!</a>
+                </div>
+             
+            </div>
+
+            <!-- Submit button -->
+           
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
